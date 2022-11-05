@@ -47,13 +47,14 @@ function puzzle() {
   const method = rand_choice(['+', '-', '*']);
   const num1 = Math.floor(Math.random() * 101);
   num2 = Math.floor(Math.random() * 101);
+  num3 = Math.floor(Math.random() * 11);
   if (method === '+') {
     var answer = num1 + num2;
   } else if (method === '-') {
     var answer = num1 - num2;
   }
   else if (method === '*') {
-    var answer = num1 * num2;
+    var answer = num1 * num3;
   }
   const question = num1.toString() + method + num2.toString();
   const final = [question, answer.toString()]
