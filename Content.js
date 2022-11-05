@@ -62,9 +62,8 @@ function puzzle() {
 }
 
 switch (window.location.hostname) {
-  case "www.facebook.com":
+  case "www.facebook.com" :
     // const initDocument = structuredClone(document);
-
     const arr = puzzle();
     const question = arr[0];
     const answer = arr[1];
@@ -79,14 +78,13 @@ switch (window.location.hostname) {
     var x = document.getElementById("answer").value;
     if (x === answer) {
       document.getElementById("blank_space").innerHTML = 'Correct';
-      alert('Correct Answer! Loading blocked website...');
+      alert('Correct Answer! Reload Website');
       // document = initDocument
       // chrome.tab.create({url : 'www.google.com'})
     } else {
       document.getElementById("blank_space").innerHTML = 'Wrong';
     }
     });
-    break;
 }
 
 
