@@ -62,30 +62,55 @@ function puzzle() {
   return(final)
 }
 
-switch (window.location.hostname) {
-  case "www.facebook.com" :
-    // const initDocument = structuredClone(document);
-    const arr = puzzle();
-    const question = arr[0];
-    const answer = arr[1];
-    console.log(question)
-    console.log(answer)
+function DOM(website_name) {
+  const arr = puzzle();
+  const question = arr[0];
+  const answer = arr[1];
+  console.log(question)
+  console.log(answer)
 
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("Facebook", question);
-    
-    document.querySelector('#submit').addEventListener('click', 
-    function() {
-    var x = document.getElementById("answer").value;
-    if (x === answer) {
-      document.getElementById("blank_space").innerHTML = 'Correct';
-      alert('Correct Answer! Reload Website');
-      // document = initDocument
-      // chrome.tab.create({url : 'www.google.com'})
-    } else {
-      document.getElementById("blank_space").innerHTML = 'Wrong';
-    }
-    });
+  document.head.innerHTML = generateSTYLES();
+  document.body.innerHTML = generateHTML(website_name, question);
+
+  document.querySelector('#submit').addEventListener('click', 
+  function() {
+  var x = document.getElementById("answer").value;
+  if (x === answer) {
+    document.getElementById("blank_space").innerHTML = 'Correct';
+    alert('Correct Answer! Reload Website');
+    // document = initDocument
+    // chrome.tab.create({url : 'www.google.com'})
+  } else {
+    document.getElementById("blank_space").innerHTML = 'Wrong';
+  }
+  });
 }
 
+
+switch (window.location.hostname) {
+  case "www.facebook.com" :
+    DOM("Facebook")
+  case "www.discord.com": 
+    DOM("Discord")
+  case "www.netflix.com": 
+    DOM("Netflix")
+  case "www.instagram.com":  
+    DOM("Instagram") 
+  case "www.reddit.com":  
+    DOM("Reddit")
+  case "www.youtube.com":  
+    DOM("Youtube") 
+  case "www.twitch.com":  
+    DOM("Twitch")
+  case "www.twitter.com":  
+    DOM("Twitter")
+  case "www.lichess.org":  
+    DOM("Lichess")
+  case "www.chess.com":  
+    DOM("Chess")
+  case "www.tumblr.com":  
+    DOM("Tumblr")
+  case "www.chess.com":  
+    DOM("Chess")
+}
 
