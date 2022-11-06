@@ -36,7 +36,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
   
 } else { // new check first if cookie will be deleted
   setTimeout(function(){
-    if (getCookie("test12345") == "") { // if cookie was deleted, dont do anything for 2 mins and then popup
+    if (getCookie("test12345") == "") { // if cookie was deleted, dont do anything for 1.3 mins and then popup
       setTimeout(function(){
         const generateSTYLES = () => {
           return `
@@ -114,7 +114,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
               <body>
                 <div class="align_txt">
                     <h1> Clock Hacks </h1>
-                    <p id="instructions">Answer the question to have access to the distracting website for the next 5 minutes</p>
+                    <p id="instructions">Answer the question to have access to the distracting website for the next 2-5 minutes</p>
                     <p>What is ${question}?</p>
                   
                     <input type="text" id="answer" placeholder="Type Here...">
