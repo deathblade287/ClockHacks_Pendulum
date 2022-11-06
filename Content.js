@@ -384,7 +384,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
           DOM("Chess")
       }
     }
-  }, 2000); // one second to see if cookie deleted
+  }, 1300); // one second to see if cookie deleted
 
 
 }
