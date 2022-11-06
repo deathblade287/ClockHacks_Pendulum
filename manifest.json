@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "prometheus ",
+  "name": "Pendulum ",
   "version": "0.0.1",
   "permissions": ["activeTab", "tabs"],
   "content_scripts": [

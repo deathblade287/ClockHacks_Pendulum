@@ -113,7 +113,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
               </head>
               <body>
                 <div class="align_txt">
-                    <h1> Clock Hacks </h1>
+                    <h1> Pendulum </h1>
                     <p id="instructions">Answer the question to have access to the distracting website for the next 2-5 minutes</p>
                     <p>What is ${question}?</p>
                   
@@ -286,7 +286,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
               </head>
               <body>
                 <div class="align_txt">
-                    <h1> Clock Hacks </h1>
+                    <h1> Pendulum </h1>
                     <p id="instructions">Answer the question to have access to the distracting website for the next 5 minutes</p>
                     <p>What is ${question}?</p>
                   
