@@ -114,7 +114,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
               <body>
                 <div class="align_txt">
                     <h1> Pendulum </h1>
-                    <p id="instructions">Answer the question to have access to the distracting website for the next 2-5 minutes</p>
+                    <p id="instructions">Answer the question to have access to the distracting website for the next 5 minutes</p>
                     <p>What is ${question}?</p>
                   
                     <input type="text" id="answer" placeholder="Type Here...">
@@ -185,8 +185,6 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
         switch (window.location.hostname) {
           case "www.facebook.com" :
             DOM("Facebook")
-          case "www.discord.com": 
-            DOM("Discord")
           case "www.netflix.com": 
             DOM("Netflix")
           case "www.instagram.com":  
@@ -197,8 +195,6 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
             DOM("Youtube") 
           case "www.twitch.com":  
             DOM("Twitch")
-          case "www.twitter.com":  
-            DOM("Twitter")
           case "www.lichess.org":  
             DOM("Lichess")
           case "www.chess.com":  
@@ -208,7 +204,7 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
           case "www.chess.com":  
             DOM("Chess")
         }
-      }, 1000*60*2);
+      }, 1000*60*5);
     } 
     else { // if cookie wasnt deleted, just carry on.
       const generateSTYLES = () => {
@@ -360,20 +356,16 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
       switch (window.location.hostname) {
         case "www.facebook.com" :
           DOM("Facebook")
-        case "www.discord.com": 
-          DOM("Discord")
         case "www.netflix.com": 
           DOM("Netflix")
         case "www.instagram.com":  
           DOM("Instagram") 
         case "www.reddit.com":  
           DOM("Reddit")
-        case "www.youtube.com":  
-          DOM("Youtube") 
         case "www.twitch.com":  
           DOM("Twitch")
-        case "www.twitter.com":  
-          DOM("Twitter")
+        case "www.youtube.com":  
+          DOM("Youtube") 
         case "www.lichess.org":  
           DOM("Lichess")
         case "www.chess.com":  
