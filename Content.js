@@ -39,16 +39,64 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
     if (getCookie("test12345") == "") { // if cookie was deleted, dont do anything for 2 mins and then popup
       setTimeout(function(){
         const generateSTYLES = () => {
-          return `<style>
-          @import url('https://fonts.googleapis.com/css?family=opensans:500');
-          
-          ._404 {
-            font-size: 220px;
+          return `
+          <style>
+          body {
+              background: #00BFFF;
+              font-family: 'Comfortaa', cursive;
+              color: #fff;
+              user-select: none;
+              margin: 50;
+              padding: 50;
+              counter-reset: points;
+          }
+
+          .align_txt {
             text-align: center;
           }
-          .question {
-            font-size: 25px;
+
+          h1 {
+            font-size: 50px;
+          }
+
+          #instructions {
+            font-size: 13px;
+            font-style: italic;
+          }
+
+          p {
+            font-size: 20px
+          }
+
+          input {
+            width: 10%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 50px;
+          }
+          input:focus {
+            outline: none;
+          }
+    
+          button {
+            background-color: #FFFFFF;
+            border-radius: 50px;
+            border-width: 0;
+            color: black;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 10px 12px;
             text-align: center;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
           }
           </style>
             `
@@ -58,26 +106,26 @@ if (getCookie("active54321") === "true") { // if previous cookie was not deleted
         const generateHTML = (pageName, question) => {
           return `
           <!DOCTYPE html>
-          <html>
-          <body style="text-align:center;">
-              <h1 style="color:green;">  
-                      Clock Hacks
-              </h1>
-              <h2>Stop Procrastinating</h2>
-              <p>What is ${question}?</p>
-            
-              Answer : <input type="text" id="answer">
-              <button type="button" id="submit">Try it</button>
-              <p id="blank_space"></p>
-            
-          </body>
-          </html>
+            <html>
+              <head>
+                <!-- Add icon library -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              </head>
+              <body>
+                <div class="align_txt">
+                    <h1> Clock Hacks </h1>
+                    <p id="instructions">Answer the question to have access to the distracting website for the next 5 minutes</p>
+                    <p>What is ${question}?</p>
+                  
+                    <input type="text" id="answer" placeholder="Type Here...">
+                    <button type="button" id="submit">Submit</button>
+                    <p id="blank_space"></p>
+                </div>
+              </body>
+            </html>
         
-           `;
+          `;
         };
-      
-      
-      
         
         function puzzle() {
           function rand_choice(choices) {
